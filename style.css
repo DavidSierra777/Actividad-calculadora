@@ -1,0 +1,115 @@
+:root {
+    --azulClaro: #546d76;
+    --verdeOscuro: #333634;
+    --naranja: #c5126e;
+    --grisClaro: #f7f7f7;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--azulClaro);
+    color: var(--verdeOscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .calculadora {
+    background: var(--naranja);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(255, 160, 122, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 360px;
+    border: 2px solid var(--naranja);
+    margin: 20px auto;
+  }
+  
+  .valores {
+    width: 90%;
+    background-color: #c5126e;
+    margin: 0 auto;
+  }
+  
+  .calculadora h1, h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--verdeOscuro);
+  }
+  
+  .calculadora input {
+    width: 90%;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid var(--naranja);
+    border-radius: 8px;
+    background-color: var(--grisClaro);
+    margin-bottom: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .calculadora input:focus {
+    border-color: var(--verdeOscuro);
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+    outline: none;
+  }
+  
+  .botones button {
+    margin: 10px 5px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--verdeOscuro);
+    color: var(--grisClaro);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .botones button:hover {
+    background-color: var(--azulClaro);
+  }
+  
+  .botones button:active {
+    transform: scale(0.95);
+  }
+  
+  #resultado {
+    margin-top: 25px;
+    font-size: 18px;
+    color: var(--verdeOscuro);
+    font-weight: 600;
+    padding-top: 10px;
+    border-top: 2px solid var(--verdeOscuro);
+  }
+  
+  @media (max-width: 480px) {
+    .botones {
+      display: block;
+    }
+    .botones button {
+      width: 100%;
+      /* Los botones ocuparán el 100% del ancho */
+    }
+    .calculadora {
+      padding: 10px;
+    }
+    .calculadora h1, h2 {
+      font-size: 18px;
+    }
+    .calculadora input {
+      padding: 10px;
+      font-size: 14px;
+    }
+    .botones button {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  
